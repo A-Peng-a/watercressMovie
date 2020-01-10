@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/movies/movies",
+    "pages/books/books",
+    "pages/logs/logs",
+    "pages/moreMovies/moreMovies",
+    "pages/movieDetails/movieDetails",
+    "pages/bookDetails/bookDetails"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5da868",
+    "navigationBarTitleText": "豆瓣首页",
+    "enablePullDownRefresh": true,
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#5da868",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "pages/img/dianying.png",
+        "selectedIconPath": "pages/img/seldianying.png"
+      },
+      {
+        "pagePath": "pages/books/books",
+        "text": "图书",
+        "iconPath": "pages/img/xiaoshuo.png",
+        "selectedIconPath": "pages/img/selxiaoshuo.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "dist/button/index",
+    "van-row": "dist/row/index",
+    "van-search": "dist/search/index",
+    "van-col": "dist/col/index",
+    "van-card": "dist/card/index",
+    "van-image": "dist/image/index",
+    "van-rate": "dist/rate/index",
+    "van-cell-group": "dist/cell-group/index",
+    "van-swipe-cell": "dist/swipe-cell/index",
+    "van-dialog": "dist/dialog/index",
+    "van-tag": "dist/tag/index",
+    "van-toast": "dist/toast/index"
+  }
+}

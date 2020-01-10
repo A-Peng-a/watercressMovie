@@ -1,0 +1,41 @@
+/* pages/bookDetails/bookDetails.wxss */
+.details{
+  /* margin-top: 10px; */
+}
+.box{
+  background: rgb(241, 241, 241)
+}
+.bookTxt{
+  padding-top: 40rpx;
+  font-size: 30rpx;
+  color: rgb(49, 48, 48);
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+.bookTitle{
+  color: black;
+  line-height: 50rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.synopsis{
+  margin-top:50rpx; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.synopsisInfo{
+    width: 90%;
+   margin-bottom: 100rpx;
+}
+.synTxt{
+      line-height: 50rpx;
+      font-size: 30rpx;
+      text-indent: 2rem;
+      text-align: left;
+}

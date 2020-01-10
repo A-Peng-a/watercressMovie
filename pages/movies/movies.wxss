@@ -1,0 +1,25 @@
+@import "../template/template.wxss";
+
+page {
+  background: rgb(250, 249, 249);
+}
+
+.movies_Box {
+  background: white;
+  margin-bottom: 50rpx;
+}
+
+.title_box {
+  display: flex;
+  flex-direction: row;
+  line-height: 50rpx;
+  padding: 25rpx;
+  font-size: 28rpx;
+  color: #5da868;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.wellInner {
+  display: inline-block;
+}

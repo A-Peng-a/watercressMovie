@@ -1,0 +1,30 @@
+<template name="more_Movies">
+
+  <view class="wellInner">
+    <view style="padding:10rpx;" data-id="{{item.id}}" catchtap="movieDetails">
+      <image src="{{item.movieImg}}"></image>
+    </view>
+    <text class="movieTitle">{{item.title}}</text>
+    <view class="score">
+      <block wx:for="{{item.arrstars}}">
+        <image src="{{item}}"></image>
+      </block>
+    </view>
+    <view style="font-size:25rpx;color:#5da868;" wx:if="{{item.average!=0}}">
+      评分：{{item.average}}分
+    </view>
+    <view style="font-size:25rpx;color:#5da868;" wx:else>
+      暂无评分
+    </view>
+  </view>
+
+</template>
+
+<!-- 星星模板 -->
+<template name="start">
+  <view class="score">
+    <block wx:for="{{ostartNum}}">
+      <image src="{{item}}"></image>
+    </block>
+  </view>
+</template>

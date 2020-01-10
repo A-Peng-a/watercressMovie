@@ -1,0 +1,25 @@
+.moreBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wellInner {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.wellInner image {
+  width: 100%;
+  height: 350rpx;
+}
+.scoreBox{
+  display: flex;
+  flex-direction: row;
+}
+.score image {
+  width: 28rpx;
+  height: 28rpx;
+}

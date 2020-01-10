@@ -1,0 +1,29 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100rpx 0;
+  box-sizing: border-box;
+}
+
+.movieTitle {
+  display: block;
+  height: 65rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.castsInfo {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.score image {
+  width: 28rpx !important;
+  height: 28rpx !important;
+}

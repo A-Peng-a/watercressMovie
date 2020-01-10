@@ -1,0 +1,38 @@
+<!--pages/books/books.wxml-->
+<van-dialog id="van-dialog" />
+<van-search value="" placeholder="请输入搜索关键词" />
+<van-toast id="custom-selector" />
+<van-toast id="success" />
+<block wx:for="{{bookLists}}">
+<van-swipe-cell id="swipe-cell" right-width="{{ 65 }}" async-close bind:close="onClose" name="{{item._id}}">
+<van-cell-group  catchtap="more" id="{{index}}">
+<van-row custom-class="box">
+
+   <van-col span="8">
+ <image src="{{item.images}}" style="width:240rpx;height:300rpx;"></image>
+   </van-col>
+  <van-col span="16" class="bookTxt">
+  <view class="bookTitle">{{item.title}}</view>
+  <view>{{item.author}}</view>
+  
+ <van-rate value="{{ item.average/2 }}" readonly count="{{ 5 }}" size="{{10}}" allow-half="true"/>
+ <view wx:if="{{item.average!=0}}">评分：{{item.average}}</view>
+  <view wx:else class="bookAver">暂无评分</view>
+  <view>出版时间：{{item.pubdate}}</view>
+  <view>单价：{{item.price}}</view>
+  <!-- <view>
+    <block wx:for="{{item.tags}}">
+    <van-tag type="success" custom-class="tags">{{item.name}}</van-tag>
+  </block>
+  </view> -->
+ 
+  </van-col>
+</van-row>
+
+
+</van-cell-group>
+  <view slot="right">删除</view>
+</van-swipe-cell>
+  </block>
+<van-button color="linear-gradient(to right, #8ef79e, #5da868)" size="large" custom-class="btn" bind:click="scan">扫码添加</van-button>
+

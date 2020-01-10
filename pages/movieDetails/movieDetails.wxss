@@ -1,0 +1,106 @@
+/* pages/movieDetails/movieDetails.wxss */
+@import "../template/template.wxss";
+.detailsBox{
+    
+}
+.bg_Box{
+  width: 100%;
+  height: 480rpx;
+  position: relative;
+}
+.bg_Box::before{
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 1;
+}
+.bg_Img{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.bg_Img image{
+  width: 100%;
+  height: 100%;
+  background-size:cover;
+  z-index: -1;
+  filter: blur(15rpx);
+  transform: scale(1.2);
+}
+.movie_Info{
+  width: 55%;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  line-height: 50rpx;
+  font-size:25rpx; 
+  color: white;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  padding: 30rpx 60rpx 0 50rpx;
+}
+.movie_Info label{
+  line-height: 100rpx;
+  font-size:45rpx; 
+  font-weight: bold;
+}
+.smallImg{
+  z-index: 3;
+  position: absolute;
+  right: 5%;
+  top: 100%;
+  margin-top: -150rpx;
+  width: 230rpx;
+  height: 300rpx;
+  /* border: 1px solid white; */
+}
+.smallImg image{
+  width: 100%;
+  height: 100%;
+}
+.synopsis{
+  margin-top:150rpx; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.synopsisInfo{
+    width: 90%;
+   margin-bottom: 100rpx;
+}
+.synTxt{
+      line-height: 50rpx;
+      font-size: 30rpx;
+      text-indent: 2rem;
+      text-align: left;
+}
+.castsBox{
+  width: 100%;
+  margin-bottom: 80rpx;
+}
+.castsInfo{
+  width: 100%;
+  /* display: flex; */
+  white-space: nowrap;
+  /* flex-direction: row; */
+}
+.wellInner{
+  width: 230rpx;
+  height: 300rpx;
+  display: inline-block;  
+  text-align: center;  
+  font-size: 28rpx;
+}
+.wellInner image{
+ width: 100%;
+ height: 300rpx;
+}

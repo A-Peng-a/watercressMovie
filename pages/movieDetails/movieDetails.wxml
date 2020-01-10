@@ -1,0 +1,58 @@
+<import src="../template/template.wxml" />
+<view class="detailsBox">
+  <view class="bg_Box">
+    <view class="bg_Img">
+      <image src="{{detailsList.images.large}}"></image>
+    </view>
+    <view class="smallImg">
+      <image src="{{detailsList.images.large}}"></image>
+    </view>
+    <view class="movie_Info">
+      <label>{{detailsList.title}}</label>
+      <view class="scoreBox">评分：
+        <template is="start" data="{{...detailsList}}" wx:if="{{detailsList.rating.average!=0}}" />
+        <text wx:if="{{detailsList.rating.average!=0}}">{{detailsList.rating.average}}</text>
+        <text wx:else>暂无评分</text>
+      </view>
+
+
+      <text>导演：<block wx:for="{{detailsList.directors}}">
+      <text>{{item.name}} </text>
+      </block>
+      </text>
+      <text>年份：{{detailsList.year}}</text>
+      <text>类型：<block wx:for="{{detailsList.genres}}">
+      <text>{{item}} </text>
+      </block>
+      </text>
+      <text>主演：<block wx:for="{{detailsList.casts}}">
+      <text>{{item.name}}, </text>
+      </block>
+      </text>
+
+    </view>
+  </view>
+
+  <view class="synopsis">
+    <view class="synopsisInfo">
+      <text style="line-height:80rpx;color:gray;font-size:25rpx;">剧情简介</text>
+      <view class="synTxt">
+        {{detailsList.summary}}
+
+      </view>
+    </view>
+  </view>
+  <view class="castsBox">
+    <text style="line-height:80rpx;color:gray;font-size:25rpx;margin-left:30rpx;">演员列表</text>
+    <scroll-view class="castsInfo" scroll-x="true">
+      <block wx:for="{{detailsList.casts}}">
+        <view class="wellInner">
+          <view style="padding:10rpx;" data-id="{{item.id}}">
+            <image src="{{item.avatars.large}}"></image>
+          </view>
+          <view>{{item.name}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<!-- 声明套入模板 -->
+<import src="../template/template.wxml" />
+<view class="moreBox">
+  <block wx:for="{{list}}">
+    <!--使用模板-->
+    <template is="more_Movies" data="{{item}}" />
+  </block>
+</view>

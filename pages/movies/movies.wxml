@@ -1,0 +1,14 @@
+<import src="../template/template.wxml" />
+<block wx:for="{{list}}" wx:for-index="bigIdx" wx:for-item="bigItm">
+  <view class="movies_Box">
+    <view class="title_box">
+      <text>{{bigItm.title}}</text>
+      <text catchtap="clickMore" data-id="{{bigIdx}}">更多>></text>
+    </view>
+    <scroll-view class="castsInfo" scroll-x="true" style="width:100%;">
+      <block wx:for="{{bigItm.subjects}}">
+        <template is="more_Movies" data="{{item}}" />
+      </block>
+    </scroll-view>
+  </view>
+</block>
